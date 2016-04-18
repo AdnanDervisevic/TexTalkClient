@@ -1,11 +1,18 @@
-<h1>Admin view</h1>
+<h1 class="article-header">Admin view</h1>
 
 <div class="container cf">
     <div>
-        <h3 class="admin-header">Theme Selection</h1>
+        <h3 class="admin-header">Theme Selection</h3>
             <div class="theme-button" ng-repeat="theme in themes">
                 <button class="btn btn-default" ng-click="themeSelect(theme)">{{theme.label}}</button>
             </div
         </div>
+        <h3 class="admin-header">Edit Publication Order</h3>
+            <ul>
+                <li ng-repeat="article in articles" class="col-lg-12">
+                    <span class="bodytext text-right col-lg-4">{{article.HeaderText}} - </span>
+                    <input class="col-lg-1 text-left" type="text" ng-model="article.DisplayIndex"></input>
+                </li>
+            </ul>
     </div>
 </div>
