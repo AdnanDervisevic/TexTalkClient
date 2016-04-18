@@ -6,10 +6,10 @@
    *
    * You can fetch here some data from API and the use them
    * in controller
-   * 
+   *
    */
   angular
-    .module('boilerplate')
+    .module('textalkArbetsProv')
     .factory('getDataFromAPI', getDataFromAPI);
 
   getDataFromAPI.$inject = ['$http', 'LocalStorage'];

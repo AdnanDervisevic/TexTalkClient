@@ -9,7 +9,7 @@
 	 * CONSTANTS.API_URL
 	 */
   angular
-  	.module('boilerplate')
+  	.module('textalkArbetsProv')
     .constant('CONSTANTS', {
       'API_URL': 'http://localhost:11459/api/Article/'
     });

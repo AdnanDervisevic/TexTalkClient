@@ -10,9 +10,9 @@
    * <responsive-nav></responsive-nav>
    *
    * Example in main-nav.html file
-   * 
+   *
    */
-  angular.module('boilerplate')
+  angular.module('textalkArbetsProv')
     .directive('responsiveNav', responsiveNav);
 
 

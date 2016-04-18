@@ -34,7 +34,7 @@
 
 
   angular
-    .module('boilerplate')
+    .module('textalkArbetsProv')
     .factory('QueryService', [
       '$http', '$q', 'CONSTANTS', QueryService
     ]);

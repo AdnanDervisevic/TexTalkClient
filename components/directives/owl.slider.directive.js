@@ -1,5 +1,5 @@
 ;(function() {
-  
+
 
   'use strict';
 
@@ -23,10 +23,10 @@
    * </myslider>
    *
    * @url http://owlgraphic.com/owlcarousel/index.html#customizing
-   * 
+   *
    */
   angular
-    .module('boilerplate')
+    .module('textalkArbetsProv')
     .directive('myslider', slider);
 
   function slider() {

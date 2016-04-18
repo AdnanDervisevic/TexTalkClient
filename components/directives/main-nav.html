@@ -12,14 +12,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#/reader">Reader</a></li>
+        <li><a href="#/reader/1">Reader</a></li>
         <li><a href="#/admin">Administrator</a></li>
       </ul>
 
 
       <ul class="pagination" style="margin: auto; margin-left: 30%">
         <li>
-          <a href="#" aria-label="Previous">
+          <a ng-href="{{previous()}}" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
@@ -29,12 +29,13 @@
         <li><a href="#/reader/4">4</a></li>
         <li><a href="#/reader/5">5</a></li>
         <li>
-          <a ng-click aria-label="Next">
+          <a ng-href="{{next()}}" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
       </ul>
 
+      <p class="ingress" style="display:inline; margin:auto; float:right;">Article {{articleNumber}} of 5</p>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

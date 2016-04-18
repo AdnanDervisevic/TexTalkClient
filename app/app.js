@@ -1,7 +1,7 @@
 
 ;(function() {
   angular
-    .module('boilerplate', [
+    .module('textalkArbetsProv', [
       'ngRoute'
     ])
     .config(config);
@@ -26,18 +26,23 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/main-nav', {
+          templateUrl: 'components/directives/main-nav.html',
+          controller: 'MainController',
+          controllerAs: 'main'
+      })
 
     $httpProvider.interceptors.push('authInterceptor');
 
   }
 
   angular
-    .module('boilerplate')
+    .module('textalkArbetsProv')
     .factory('authInterceptor', authInterceptor);
 
-  authInterceptor.$inject = ['$rootScope', '$q', 'LocalStorage', '$location'];
+  authInterceptor.$inject = ['$rootScope', '$q',  '$location'];
 
-  function authInterceptor($rootScope, $q, LocalStorage, $location) {
+  function authInterceptor($rootScope, $q, $location) {
 
     return {
 
@@ -64,7 +69,7 @@
    * Run block
    */
   angular
-    .module('boilerplate')
+    .module('textalkArbetsProv')
     .run(run);
 
   run.$inject = ['$rootScope', '$location'];

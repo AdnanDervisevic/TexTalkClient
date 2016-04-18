@@ -9,6 +9,17 @@
     font-weight: bold;
 }
 
+.admin-header {
+    color: #555;
+    font-size: 34px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.theme-button {
+    margin-top: 10px;
+}
+
 .ingress {
     font-weight: bold;
    font-family: 'Slabo 13px', serif;
