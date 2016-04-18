@@ -1,0 +1,8 @@
+<h1 class="text-center article-header">{{articles[currentArticleIndex].HeaderText}}</h2>
+<img class="top-image" ng-src="{{articles[currentArticleIndex].ImagePath}}"/>
+<div class="row">&nbsp;</div>
+<p class="ingress">{{articles[currentArticleIndex].IngressText}}</p>
+
+<p ng-repeat="Body in articles[currentArticleIndex].BodyText track by $index" class="bodytext">
+    {{Body.Paragraph}}
+</p>
