@@ -1,0 +1,11 @@
+.admin-header,.article-header{color:#555;font-family:Oswald,sans-serif;font-weight:700}
+.bodytext,.theme-button{margin-top:10px}
+@font-face{font-family:'Slabo 13px';font-style:normal;font-weight:400;src:local('Slabo 13px'),local('Slabo13px-Regular'),url(https://fonts.gstatic.com/s/slabo13px/v3/fScGOqovO8xyProgHURSRy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}
+@font-face{font-family:Oswald;font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(https://fonts.gstatic.com/s/oswald/v10/Y_TKV6o8WovbUd3m_X9aAA.ttf) format('truetype')}
+.article-header{font-size:40px}
+.admin-header{font-size:34px}
+.ingress{font-weight:700;font-family:'Slabo 13px',serif;font-size:16px;color:#333}
+.bodytext{font-family:'Open Sans',sans-serif;color:#555 font-size: 16px}
+.top-image{width:100%;max-height:100%;margin-left:auto;margin-right:auto}
+.main-wrapper{background-color:#F8F8FF}

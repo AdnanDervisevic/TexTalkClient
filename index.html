@@ -2,9 +2,9 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-csp="" ng-app="textalkArbetsProv"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-csp="" ng-app="textalkArbetsProv" ng-controller="MainController"> <!--<![endif]-->
 
-	<head>
+	<head theme-selection>
 
 		<base href="/">
 		<meta charset="utf-8">
@@ -27,7 +27,6 @@
 		<!-- CSS -->
 		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
-		<link rel="stylesheet" type="text/css" ng-href="{{style()}}" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 		<!-- endbuild -->
@@ -57,7 +56,6 @@
 	<!-- build:libs js/libs.js -->
 	<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
 
 	<!-- endbuild -->
 
@@ -75,8 +73,7 @@
 	<script type="text/javascript" src="components/services/queryService.service.js"></script>
 	<script type="text/javascript" src="components/services/article.service.js"></script>
 	<script type="text/javascript" src="components/directives/main.nav.directive.js"></script>
-	<script type="text/javascript" src="components/directives/responsive.nav.directive.js"></script>
-	<script type="text/javascript" src="components/directives/owl.slider.directive.js"></script>
+	<script type="text/javascript" src="components/directives/theme-selection.directive.js"></script>
 	<!-- endbuild -->
 
 	<!-- Application sections -->

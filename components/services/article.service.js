@@ -1,6 +1,8 @@
 angular.module('textalkArbetsProv').
-factory('article', function(){
+factory('articleService', function(){
     return {
-        currentDisplayIndex: ""
+        currentDisplayIndex: "",
+        articles: {},
+        stylePath: ""
     };
 })

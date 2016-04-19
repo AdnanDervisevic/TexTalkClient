@@ -1,36 +1,38 @@
 angular.module('textalkArbetsProv').
-controller('MainController', ['QueryService', 'article', '$scope', '$routeParams',
-function(QueryService, article, $scope, $routeParams) {
+controller('MainController', ['QueryService', 'articleService', '$scope', '$routeParams',
+function(QueryService, articleService, $scope, $routeParams) {
     $scope.article = {};
     $scope.articles = {};
-
-    var selectedTheme = 'Light';
+    $scope.stylePath = "";
     $scope.themes =
     [
         {  label: 'Light' },
         {  label: 'Dark' }
     ];
 
-    $scope.style = function () {
-        var stylePath = 'styles/light/style.css';
+    if (articleService.stylePath === "") {
+        $scope.stylePath = selectTheme('Light');
+    }
 
-        if (selectedTheme === 'Dark') {
-            stylePath = 'styles/dark/style.css';
+    function selectTheme (theme) {
+        articleService.stylePath = 'styles/light/style.css';
+
+        if (theme === 'Dark') {
+            articleService.stylePath = 'styles/dark/style.css';
         }
-
-        return stylePath;
+        console.warn(articleService.stylePath);
     }
 
     function initialize (data){
-        if (angular.isUndefined($scope.articles.count)) {
-            $scope.articles = data;
-            console.warn($scope.articles.length);
+        if (angular.isUndefined(articleService.articles.length)) {
+            articleService.articles = data;
+            $scope.articles = articleService.articles;
         }
-        console.console.warn($scope.articles.length);
+
         getArticle();
     }
 
-    article.currentDisplayIndex = $routeParams.displayIndex;
+    articleService.currentDisplayIndex = $routeParams.displayIndex;
 
     QueryService.query('GET', 'GetArticles',{},{}).then(function (getArticles) {
             initialize(getArticles.data)
@@ -38,17 +40,17 @@ function(QueryService, article, $scope, $routeParams) {
 
     $scope.themeSelect = function(theme) {
         if (theme.label === 'Light') {
-            $scope.selectedTheme = 'Light';
+            selectTheme('Light');
         }
         else {
-            $scope.selectedTheme = 'Dark';
+            selectTheme('Dark');
         }
     }
 
     function getArticle() {
-        for (var i = 0; i < $scope.articles.length; i++) {
-            if($scope.articles[i].DisplayIndex == $routeParams.displayIndex) {
-                $scope.article = $scope.articles[i];
+        for (var i = 0; i < articleService.articles.length; i++) {
+            if(articleService.articles[i].DisplayIndex == $routeParams.displayIndex) {
+                $scope.article = articleService.articles[i];
             }
         }
     };

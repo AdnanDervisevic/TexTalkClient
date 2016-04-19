@@ -1,16 +1,17 @@
 angular.module('textalkArbetsProv').
-directive('mainNav', ['article', function(article) {
+directive('mainNav', ['articleService', function(articleService) {
     // Definition of directive
     var directiveDefinitionObject = {
         restrict: 'E',
         templateUrl: 'components/directives/main-nav.html',
         link: function($scope, element, attr) {
-            $scope.articleNumber = article.currentDisplayIndex;
+            $scope.articleNumber = "";
 
             $scope.next = function () {
               var routeString = "#/reader/";
-              if (article.currentDisplayIndex != 5) {
-                  routeString += parseInt(article.currentDisplayIndex, 10)+1;
+              $scope.articleNumber = articleService.currentDisplayIndex;
+              if (articleService.currentDisplayIndex != 5) {
+                  routeString += parseInt(articleService.currentDisplayIndex, 10)+1;
               }
               else {
                   routeString += 1;
@@ -21,8 +22,8 @@ directive('mainNav', ['article', function(article) {
 
             $scope.previous = function () {
                 var routeString = "#/reader/";
-                if (article.currentDisplayIndex != 1) {
-                    routeString += parseInt(article.currentDisplayIndex, 10) - 1;
+                if (articleService.currentDisplayIndex != 1) {
+                    routeString += parseInt(articleService.currentDisplayIndex, 10) - 1;
                 }
                 else {
                     routeString += 5;
