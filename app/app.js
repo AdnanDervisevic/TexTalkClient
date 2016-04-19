@@ -21,6 +21,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/', {
+          templateUrl: 'views/reader.html',
+          controller: 'MainController',
+          controllerAs: 'main'
+        })
       .when('/admin', {
         templateUrl: 'views/admin.html',
         controller: 'MainController',
@@ -28,11 +33,6 @@
       })
       .when('/main-nav', {
           templateUrl: 'components/directives/main-nav.html',
-          controller: 'MainController',
-          controllerAs: 'main'
-      })
-      .when('/', {
-          templateUrl: 'views/reader.html',
           controller: 'MainController',
           controllerAs: 'main'
       })
@@ -80,9 +80,7 @@
   run.$inject = ['$rootScope', '$location'];
 
   function run($rootScope, $location) {
-
-    // put here everything that you need to run on page load
-
+      $location.url("/reader/1")
   }
 
 

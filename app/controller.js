@@ -3,6 +3,7 @@ controller('MainController', ['QueryService', 'articleService', '$scope', '$rout
 function(QueryService, articleService, $scope, $routeParams) {
     $scope.article = {};
     $scope.articles = {};
+    $scope.introduction = true;
     $scope.stylePath = "";
     $scope.themes =
     [
