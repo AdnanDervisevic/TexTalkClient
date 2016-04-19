@@ -14,11 +14,15 @@
     font-size: 34px;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    margin: 20px,0px,20px,0px;
 }
 
 .theme-button {
     margin-top: 10px;
+    display: inline;
+    margin-right: 10px;
 }
+
 
 .ingress {
     font-weight: bold;
@@ -40,6 +44,23 @@
     margin-left: auto;
     margin-right: auto
 }
+.article-name {
+    margin-top: 0;
+}
+
+.article-list-item {
+    margin-bottom: 5px;
+}
+
+.order-input {
+    width: 40px;
+}
+
+ .article-list{
+    list-style: none;
+    padding: 0px;
+}
+
 
 .container {
     background-color: #665847;

@@ -7,10 +7,11 @@
             </div>
         </div>
         <h3 class="admin-header">Edit Publication Order</h3>
-            <ul>
-                <li ng-repeat="article in articles" class="col-lg-12">
-                    <span class="bodytext text-right col-lg-4">{{article.HeaderText}} -</span>
-                    <input class="col-lg-1 text-left" type="text" ng-model="article.DisplayIndex"></input>
+            <ul class="article-list">
+                <li ng-repeat="article in articles" class="article-list-item">
+                    <input class="order-input text-left" type="number" max="5" ng-model="article.DisplayIndex"></input>
+
+                    <span class="text-left article-name bodytext">- {{article.HeaderText}}</span>
                 </li>
             </ul>
     </div>
