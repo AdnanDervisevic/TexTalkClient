@@ -31,6 +31,11 @@
           controller: 'MainController',
           controllerAs: 'main'
       })
+      .when('/', {
+          templateUrl: 'views/reader.html',
+          controller: 'MainController',
+          controllerAs: 'main'
+      })
 
     $httpProvider.interceptors.push('authInterceptor');
 
