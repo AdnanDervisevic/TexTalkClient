@@ -6,7 +6,6 @@ directive('themeSelection', ['articleService', function(articleService) {
         templateUrl: 'components/directives/theme-selection.html',
         link: function($scope, element, attr) {
             $scope.style = articleService;
-            console.warn(articleService);
         }
     };
 }])

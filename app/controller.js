@@ -7,20 +7,17 @@ function(QueryService, articleService, $scope, $routeParams) {
     $scope.themes =
     [
         {  label: 'Light' },
-        {  label: 'Dark' }
+        {  label: 'Dark' },
+        { label: 'Textalk' },
+        { label: 'Firewatch' }
     ];
 
-    if (articleService.stylePath === "") {
-        $scope.stylePath = selectTheme('Light');
+    $scope.themeSelect = function(theme) {
+        articleService.stylePath = 'styles/' + theme.label.toLowerCase() + '/style.css';
     }
 
-    function selectTheme (theme) {
-        articleService.stylePath = 'styles/light/style.css';
-
-        if (theme === 'Dark') {
-            articleService.stylePath = 'styles/dark/style.css';
-        }
-        console.warn(articleService.stylePath);
+    if (articleService.stylePath === "") {
+        $scope.stylePath = $scope.themeSelect({label: 'light'});
     }
 
     function initialize (data){
@@ -38,20 +35,12 @@ function(QueryService, articleService, $scope, $routeParams) {
             initialize(getArticles.data)
     });
 
-    $scope.themeSelect = function(theme) {
-        if (theme.label === 'Light') {
-            selectTheme('Light');
-        }
-        else {
-            selectTheme('Dark');
-        }
-    }
-
     function getArticle() {
         for (var i = 0; i < articleService.articles.length; i++) {
             if(articleService.articles[i].DisplayIndex == $routeParams.displayIndex) {
                 $scope.article = articleService.articles[i];
             }
         }
+        $scope.articles = articleService.articles;
     };
 }]);
