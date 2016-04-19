@@ -1,17 +1,16 @@
-.admin-header,.article-header{font-family:Oswald,sans-serif}
+.admin-header,.article-header{font-family:Oswald,sans-serif;font-weight:700}
 @font-face{font-family:'Slabo 13px';font-style:normal;font-weight:400;src:local('Slabo 13px'),local('Slabo13px-Regular'),url(https://fonts.gstatic.com/s/slabo13px/v3/fScGOqovO8xyProgHURSRy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype')}
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}
 @font-face{font-family:Oswald;font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(https://fonts.gstatic.com/s/oswald/v10/Y_TKV6o8WovbUd3m_X9aAA.ttf) format('truetype')}
-.article-header{color:#B174AF;font-size:40px;font-weight:700}
-.admin-header,.ingress{font-weight:700;color:#933890}
-.admin-header{font-size:34px;margin:20px,0}
+.article-header{color:#F60;font-size:40px}
+.admin-header{color:salmon;font-size:34px;margin:20px,0}
 .theme-button{margin-top:10px;display:inline;margin-right:10px}
-.ingress{font-family:'Slabo 13px',serif;font-size:16px}
-.bodytext{font-family:'Open Sans',sans-serif;color:#222;font-size:16px;margin-top:10px}
+.ingress{font-weight:700;font-family:'Slabo 13px',serif;font-size:16px;color:#F90}
+.bodytext{font-family:'Open Sans',sans-serif;color:#EFE0B9;font-size:16px;margin-top:10px}
 .top-image{width:100%;max-height:100%;margin-left:auto;margin-right:auto}
 .article-name{margin-top:0}
 .article-list-item{margin-bottom:5px}
 .order-input{width:40px}
 .article-list{list-style:none;padding:0}
-.container{background-color:#FFF}
-.main-wrapper{background-color:#f1f0ef}
+.container{background-color:#665847}
+.main-wrapper{background-color:#3D362D}
