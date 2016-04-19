@@ -3,14 +3,14 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 .article-header {
-    color: #933890;
+    color: #B174AF;
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
 }
 
 .admin-header {
-    color: #B174AF;
+    color: #933890;
     font-size: 34px;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;

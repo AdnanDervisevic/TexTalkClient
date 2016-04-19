@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 .article-header {
-    color: #ff3300;
+    color: #FF6600;
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -24,12 +24,12 @@
     font-weight: bold;
    font-family: 'Slabo 13px', serif;
     font-size: 16px;
-    color: #CF5300;
+    color: #FF9900;
 }
 
 .bodytext {
     font-family: 'Open Sans', sans-serif;
-    color: #999;
+    color: #EFE0B9;
     font-size: 16px;
     margin-top: 10px;
 }
@@ -42,9 +42,9 @@
 }
 
 .container {
-    background-color: #333
+    background-color: #665847;
 }
 
 .main-wrapper {
-    background-color: #222;
+    background-color: #3D362D;
 }
