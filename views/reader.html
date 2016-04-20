@@ -1,8 +1,8 @@
-<h1 class="text-center article-header">{{article.HeaderText}}</h2>
+<h1 class="text-center article-header">{{article.Header}}</h2>
 <img class="top-image" ng-src="{{article.ImagePath}}"/>
 <div class="row">&nbsp;</div>
-<p class="ingress">{{article.IngressText}}</p>
+<p class="ingress">{{article.Ingress}}</p>
 
-<p ng-repeat="Body in article.BodyText track by $index" class="bodytext">
-    {{Body.Paragraph}}
+<p ng-repeat="paragraph in article.BodyText.Paragraph track by $index" class="bodytext">
+    {{paragraph}}
 </p>

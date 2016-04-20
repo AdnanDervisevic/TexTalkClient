@@ -1,6 +1,6 @@
 angular.module('textalkArbetsProv').
-controller('MainController', ['QueryService', 'articleService', '$scope', '$routeParams',
-function(QueryService, articleService, $scope, $routeParams) {
+controller('MainController', ['QueryService', 'articleService', '$scope', '$routeParams', '$http',
+function(QueryService, articleService, $scope, $routeParams, $http) {
     $scope.article = {};
     $scope.articles = {};
     $scope.introduction = true;
@@ -32,8 +32,12 @@ function(QueryService, articleService, $scope, $routeParams) {
 
     articleService.currentDisplayIndex = $routeParams.displayIndex;
 
-    QueryService.query('GET', 'GetArticles',{},{}).then(function (getArticles) {
-            initialize(getArticles.data)
+    //QueryService.query('GET', 'GetArticles',{},{}).then(function (getArticles) {
+    //        initialize(getArticles.data);
+    //});
+
+    $http.get('/articles/articles.json').then(function (jsonArticles){
+        initialize(jsonArticles.data.Articles.Article)
     });
 
     function getArticle() {
