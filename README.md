@@ -2,9 +2,9 @@
 Started out with AngularJS-Boilerplate, removed a bunch of stuff I don't need, and finally landed on some niceties that I think made it an interesting visual design. Fun little project! :)
 
 # Setup
-npm install && bower install
+Run npm install && bower install in your console (assuming you have the dependencies)
 - install all dependencies
 
 # Start webapp
-gulp
+To start the app, run gulp (this assumes you have gulp installed and globally accessible)
 - all SCSS/HTML will be watched for changes and injected into browser thanks to BrowserSync
